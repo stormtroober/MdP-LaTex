@@ -66,13 +66,36 @@
             \\$A$ non \'e \textbf{numerabile} , perch\'e \'e impossibile creare un elenco infinito che contenga tutte le sequenze di $A$.\\
             \textbf{Osservazione}\\ 
             Questo insieme $A$ e $R$ hanno la stessa cardinalit\'a. Tale cardinalit\'a si dice \textbf{del continuo}. \url{http://www.scit.wlv.ac.uk/~cm1993/maths/mm2217/rup.htm}
-             
-            
-            
-    
-    
-    
-        
+        \subsubsection{Esercizi}
+            \textbf{\large 1}\\
+            Abbiamo due biglietti da regalare a due amici scelti su 10. In quanti modi posso fare la scelta?
+            \\
+            \textbf{\large Soluzione}\\
+            Possiamo partire puntando la prima persona ($1$) e contando con quante possibili persone la persona $1$ può andare al concerto. Siccome sono $10$ persone, allora la persona $1$ potrà andare al concerto con $9$ persone.
+            Ora controlliamo con quante persone la persona $2$ può andare al concerto (escludendo l'esistenza della persona $1$), e sta volta saranno $8$.
+            Ora vedremo uno schema ricorsivo per il conteggio delle combinazioni siccome la persona $3$, potrà andare al concerto con $7$ persone (escludendo questa volta la persona $1, 2$).
+            Ora per contare le possibili combinazioni \`e facile vedere che ci basta fare una sommatoria da $1$ a $9$.
+            \\    
+            $\sum_{i=1}^{9}i = 45$, using Gauss formula $\frac{n(n+1)}{2}$.
+            \\
+            \\
+            \textbf{\large 2}\\
+            C'è un torneo di un gioco (non specificato) in quale abbiamo 3 concorrenti A, B, C. Quali sono le possibili combinazioni del podio contando anche i pareggi?
+            \\
+            \textbf{\large Soluzione}\\
+            $1^o$ Caso: nessun pareggio. 6 possibili combinazioni:\\
+            1) A,B,C\\
+            2) A,C,B\\
+            3) B,A,C\\
+            4) B,C,A\\
+            5) C,A,B\\
+            6) C,B,A\\
+            \\
+            Possiamo trovare queste combinazioni calcolando $3! = 6$.\\
+            $2^o$ Caso: tutti parimerito. $1$ Combinazione:\\
+            A,B,C (Indipendente dall'ordine)\\
+            $3^o$ Caso: due parimerito. $6$ Combinazioni:\\
+            1) (A,B),C o alternativamente C,(A,B). () Indica stessa posizione/pareggio, siccome sono $3$ concorrenti moltiplico queste $2$ possibili combinazioni per $3 = 6$.\\
+            Totale : $6 + 1 + 6 = 13$.
+                
 \end{document}
-
-   
