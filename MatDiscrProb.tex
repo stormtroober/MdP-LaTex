@@ -187,8 +187,28 @@
             Da aggiustare.\\
             \subsection{Principio di induzione }
             Supponiamo di avere una famiglia di proposizione chiamata $\underline{P}(n), n \geq n_0$ possono essere vere o false. Per mostrare che sono tutte vere dobbiamo verificare i seguenti due passi.\\
-            1) passo base dell'induzione: verificare che $P(n_0)$ è vera.
-            2) passo induttivo verificare che se $\underline{P}(n)$ è vera, allora $\underline{P}(n+1)$ è anche vera $\forall n \geq n_0$.
+            1) \textbf{passo base} dell'induzione: verificare che $P(n_0)$ \'e vera.\\
+            2) \textbf{passo induttivo} verificare che se $\underline{P}(n)$ \'e vera, allora $\underline{P}(n+1)$ \'e anche vera $\forall n \geq n_0$.
+            \subsubsection{Esempio}
+            Supponiamo di avere $n$ amici.\\
+            Il primo amico beve \textbf{1} birra, il secondo amico beve \textbf{2} birre, il terzo \textbf{3}, e cos\'i via..\hspace{0,35cm}  Quante birre vengono bevute in tutto?\\
+            Se $n = 1$, viene bevuta \textbf{1} birra, se $n=2$, ne vengono bevute \textbf{4}, mentre se $n=3$ ne vengono bevute \textbf{9}.\\
+            Ipotizziamo quindi che il numero di birre sia $n^2$. Verifichiamo i passi dell'induzione.\\
+            \textbf{Passo base} : $P(1)=1$ . Verificato.\\
+            \textbf{Passo induttivo} : Il numero totale di birre per n+1 allora dovrebbe essere  $n^2 + 2(n+1) -1$ $= n^2 +2n +1 = (n+1)^2$.
+            \subsection{Principio di uguaglianza}
+            $A,B$ insiemi in corrispondenza biunivoca $\rightarrow$ $\mid A\mid$ = $\mid B \mid$, vale anche il \textbf{vicerversa}.
+            \subsubsection{Esempio}
+            Il numero di cioccolatini mangiati \'e uguale al numero di incarti lasciati in giro.
+            \subsection{Principio di somma}
+            $A,B$ insiemi tale che $A \cap B = \emptyset \rightarrow \mid A \cup B \mid = \mid A \mid + \mid B \mid $.
+            \subsection{Principio di moltiplicazione}
+            $A,B$ insiemi $\rightarrow \mid A \times B \mid = \mid A \mid \cdot \mid B \mid$, in particolare $\mid A^n \mid = \mid A \mid ^n$.
+            \subsubsection{Corollario}
+            Se $\mid A \mid = n$ , $\mid P(A)\mid=2^n$.\\
+            \textbf{Dimostrazione}\\
+            Per il principio di uguaglianza $\mid P(A) \mid = \mid \{0,1\}^n \mid$ perch\'e abbiamo visto che esiste una biiezione tra $P(A)$ e $\{0,1\}^n$.\\
+            Per il principio di moltiplicazione $\mid\{0,1\}^n \mid=\mid \{0,1\}\mid^n= 2^n$
             
                 
 \end{document}
