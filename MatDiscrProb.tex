@@ -83,14 +83,15 @@
             C'è un torneo di un gioco (non specificato) in quale abbiamo 3 concorrenti A, B, C. Quali sono le possibili combinazioni del podio contando anche i pareggi?
             \\
             \textbf{\large Soluzione}\\
-            $1^o$ Caso: nessun pareggio. 6 possibili combinazioni:\\
-            1) A,B,C\\
-            2) A,C,B\\
-            3) B,A,C\\
-            4) B,C,A\\
-            5) C,A,B\\
-            6) C,B,A\\
-            \\
+            $1^o$ Caso: nessun pareggio. 6 possibili combinazioni:
+            \begin{center}
+            	1) A,B,C\\
+            	2) A,C,B\\
+            	3) B,A,C\\
+            	4) B,C,A\\
+            	5) C,A,B\\
+            	6) C,B,A\\
+            \end{center}
             Possiamo trovare queste combinazioni calcolando $3! = 6$.\\
             $2^o$ Caso: tutti parimerito. $1$ Combinazione:\\
             A,B,C (Indipendente dall'ordine)\\
@@ -102,22 +103,26 @@
             Lancio un dado $3$ volte. Quante sono le possibili sequenze di risultati in cui in ordine di grandezza il dado con valore più alto è $\geq 5$, il secondo più alto $\geq 4$, il terzo più alto $\geq 3$.\\
             \textbf{\large Soluzione}\\
             Come prima, dividiamo il problema in sottoproblemi e studiamo caso per caso.\\
-            $1^o$ Caso: $3$ risultati diversi:\\
-            1) $4, 5, 6$\\
-            2) $3, 4, 5$\\
-            3) $3, 4, 6$\\
-            4) $3, 5, 6$\\
+            $1^o$ Caso: $3$ risultati diversi:
+            \begin{center}
+            	1) $4, 5, 6$\\
+            	2) $3, 4, 5$\\
+            	3) $3, 4, 6$\\
+            	4) $3, 5, 6$\\
+            \end{center}
             Ognuna di queste ha 6 possibili combinazioni.\\
             Totale temporaneo = $4 \cdot 6 = 24$.\\
-            $2^o$ Caso: $2$ risultati uguali $1$ diverso:\\
-            1) $4,4,5$\\
-            2) $4,4,6$\\
-            3) $5,5,3$\\
-            4) $5,5,4$\\
-            5) $5,5,6$\\
-            6) $6,6,3$\\
-            7) $6,6,4$\\
-            8) $6,6,5$\\
+            $2^o$ Caso: $2$ risultati uguali $1$ diverso:
+            \begin{center}
+            	1) $4,4,5$\\
+            	2) $4,4,6$\\
+            	3) $5,5,3$\\
+            	4) $5,5,4$\\
+            	5) $5,5,6$\\
+            	6) $6,6,3$\\
+            	7) $6,6,4$\\
+            	8) $6,6,5$\\
+            \end{center}
             E ognuna di queste può avere $3$ combinazioni diverse, \\quindi totale temporaneo = $24 + (8 \cdot 3) = 48$.\\
             $3^o$ Caso: $3$ risultati uguali:\\
             1) $5,5,5$\\
@@ -127,11 +132,13 @@
             \textbf{\large 4}\\
             L'insieme $A = \{1,2,...,11\}$ ha più sottoinsiemi di cardinalità pari o dispari o il numero di sottoinsiemi pari è uguale a quello di dimensione dispari?\\
             \textbf{\large Soluzione}\\
-            Possiamo usare di ciascun sottoinsieme il suo complementare, esempio con $n = 3$ : \\
-            $\{1,2\} \longleftrightarrow 3$\\
-            $\{1,3\} \longleftrightarrow 2$\\
-            $\{2,3\} \longleftrightarrow 1$\\
-            $\emptyset \longleftrightarrow \{1,2,3\}$\\
+            Possiamo usare di ciascun sottoinsieme il suo complementare, esempio con $n = 3$ :
+            \begin{center}
+           		$\{1,2\} \longleftrightarrow 3$\\
+            	$\{1,3\} \longleftrightarrow 2$\\
+            	$\{2,3\} \longleftrightarrow 1$\\
+            	$\emptyset \longleftrightarrow \{1,2,3\}$\\
+            \end{center}
             Per induzione quindi avremo sempre degli insiemi pari complementari a quelli dispari e quindi il numero di sottoinsiemi pari è uguale a quelli dispari.\\
             \textbf{\large 5}\\
             4 coppie moglie e marito, sono scambisti per una serata, in quanti modi possono scambiarsi? (Sono etero).\\
@@ -161,15 +168,17 @@
             \subsubsection{Definizione}
             Sia $A$ un insieme e $|A| = n$. ALlora esiste una biiezione tra $P(A)$ e ${0,1}^n$.
             \subsubsection{Dimostrazione}
-            Iniziamo con un esempio $A = \{1,2,3\}$.\\
-            $\{\emptyset\} \longrightarrow 000$\\
-            $\{1,2,3\} \longrightarrow 111$\\
-            $\{1\} \longrightarrow 100$\\
-            $\{2\} \longrightarrow 010$\\
-            $\{3\} \longrightarrow 001$\\
-            $\{1,2\} \longrightarrow 110$\\
-            $\{1,3\} \longrightarrow 101$\\
+            Iniziamo con un esempio $A = \{1,2,3\}$.
+            \begin{center}
+            	$\{\emptyset\} \longrightarrow 000$ \\
+            	$\{1,2,3\} \longrightarrow 111$\\
+            	$\{1\} \longrightarrow 100$\\
+            	$\{2\} \longrightarrow 010$\\
+            	$\{3\} \longrightarrow 001$\\
+            	$\{1,2\} \longrightarrow 110$\\
+            	$\{1,3\} \longrightarrow 101$\\
             $\{2,3\} \longrightarrow 011$\\
+            \end{center}
             In generale se $A = \{1,2,...,n\}$ allora $F:P(A) \to \{0,1\}^n$.\\
             Sia $S \subseteq A$, $F(S) = (b_1,b_2,...,b_n) \in \{0,1\}^n$ con $\begin{cases}
             1 if a_i \in S\\
