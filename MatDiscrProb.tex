@@ -1,6 +1,7 @@
 
 \documentclass[11pt]{article}
 \usepackage{hyperref}
+\usepackage{mathtools}
 \begin{document}
     \section*{\huge \centering Matematica Discreta e Probabilit\'a }
      \subsection*{Suddivisione corso} 
@@ -209,6 +210,44 @@
             \textbf{Dimostrazione}\\
             Per il principio di uguaglianza $\mid P(A) \mid = \mid \{0,1\}^n \mid$ perch\'e abbiamo visto che esiste una biiezione tra $P(A)$ e $\{0,1\}^n$.\\
             Per il principio di moltiplicazione $\mid\{0,1\}^n \mid=\mid \{0,1\}\mid^n= 2^n$
+            
+            \subsection{Esercizi per il 3 Ottobre}
+			\textbf{\large 1} \\
+			\textit{Quante sono le sequenze date da due difre decimali?} \\\\
+			\textbf{Soluzione} \\
+			$\{00,01,02,...,09,10,11,...,99\}$ La somma di tali sequenze \`e $100$. \\\\
+			\textbf{\large 2} \\
+			\textit{Un cammino reticolare è un percorso sul piano cartesiano che 			effettua passi di lunghezza uno verso destra o verso l’alto. Quanti 				sono i cammini reticolari da $(0,0)$ a $(2,2)$?} \\\\
+			\textbf{Soluzione} \\
+			1 percorso: fissiamo una sola direzione di partenza e muoviamoci verso questa finch\`e non sar\`a necessario cambiarla.
+			$n-1$ percorsi: partendo dall'ultimo movimento del percorso precedente modifichiamo il pi\'u vicino in modo tale da creare un percorso diverso da quello precedente. \\ 
+			Percorsi totali: $6$. \\\\			
+			\textbf{\large 3} \\
+			\textit{Mostrare che esiste una corrispondenza biunivoca tra i cammini reticolari (vedi esercizio precedente per la definizione) da $(0,0)$ a $(3,2)$ e i sottoinsiemi di $\{1,2,3,4,5\}$ di cardinalit\`a $2$.}	\\\\
+			\textbf{Soluzione} \\
+			Notando che il numero totale di movimenti per arrivare a $(3,2)$ è pari a 5 (elementi dell'insieme) e che gli spostamenti verso l'alto sono necessariamente 2 (elementi del sottoinsieme di cardinalità 2), possiamo pensare al numero di ogni sottoinsieme come il numero del movimento in cui ci spostiamo verso l'alto:\\
+			
+			\begin{center}
+           		$\{1,2\} \rightarrow$ primo e secondo movimento verso l'alto\\
+				$\vdotswithin{}$\\
+            	$\{1,5\} \rightarrow$ primo e quinto movimento "	"\\
+            	$\{2,3\} \rightarrow$ secondo e terzo movimento "	"\\
+				$\vdotswithin{}$\\
+            	$\{4,5\} \rightarrow$ quarto e quinto movimento "	"\\
+            \end{center}
+			\textbf{\large 4} \\
+			\textit{Esibire una corrispondenza biunivoca tra  gli intervalli aperti reali $(0,1)$ e $(5,10)$.} \\\\
+			\textbf{Soluzione} \\
+			$f: ]0,1[ \longrightarrow ]5,10[$	\\		
+			$f(x)=5x+5$ \\\\
+			$f$ \`e iniettiva? \\
+			$5x+5=5x'+5$ \\
+			$\Rightarrow x=x'$\\
+			$f$ \`e suriettiva? \\
+			$y \in (5,10)$ \\
+			$y=5x+5 \iff x= \frac{y-5}{5}$
+            
+            
             
                 
 \end{document}
