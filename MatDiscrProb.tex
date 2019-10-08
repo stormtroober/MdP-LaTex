@@ -240,6 +240,23 @@
             $\mid S_i \mid$ = $m$ ($prodotto$ $condizionato$).\\
             Siccome gli $S_i$ sono disgiunti per il principio di somma, \\
             ho $\mid S \mid$ = $\mid S_1 \mid$ + ... + $\mid S_n \mid$ = $m$ + $...$ + $m$ = $n \cdot m$.
+            \subsubsection{Estendiamo il concetto}
+            $S \subseteq A_1 \times A_2 \times ... \times A_k$ \'e un prodotto condizionato di tipo ($m_1,m_2,m_3,...,m_k)$ se:\\
+            1. Ho $m_1$ scelte per la prima coordinata\\
+            2. Fissata la prima coordinata, ho $m_2$ scelte per la seconda coordinata.\\
+            3. Fissate le prime due coordinate ho $m_3$ scelte per la terza.\\
+            Cos\'i via fino a..\\
+            4. Fissate le prime $(k-1)$ coordinate ho $m_k$ scelte per la k.\\
+            \\
+            Analogamente a prima se $S$ \'e un prodotto condizionato di tipo $(m_1,...,m_k)$ allora $\mid S \mid $ = $m_1 \cdot m_2 \cdot ... \cdot m_k$.\\
+            \\
+            \textbf{Esempio}\\
+            $A=\{a,b,c$ : $a,b,c \in N$ , $a \leq 10$ , $0\leq b-a \leq 10$ , $0 \leq c-a-b \leq 10 \}$.\\ A= terne di numeri naturali che rispettano le condizioni. $\mid A \mid $ ?
+            \\Abbiamo \textbf{11} modi per scegliere $a$, fissata $a$ abbiamo \textbf{11} modi per scegliere $b\rightarrow(a \leq b \leq 10+a$)\\
+            Fissate $(a,b)$, abbiamo \textbf{11} modi anche per scegliere la terza coordinata $c\rightarrow(a+b\leq c \leq 10+a+b)$.\\
+            $A$ \'e quindi un prodotto condizionato di tipo (11,11,11), $\mid A \mid$ = $11^3$ = $1331$.\\
+            \textbf{Osservazione}\\
+            $A,B$ , $\mid A \mid $ = $n$, $\mid B \mid$ = $n$. $A \times B $ \'e un prodotto condizionato di tipo $(n,m)$.
             
             
             \subsection{Esercizi per il 3 Ottobre}
