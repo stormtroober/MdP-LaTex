@@ -10,7 +10,6 @@
         statistica descrittiva, probabilit\'a e statistica inferenziale. \\
         Verranno dedicate 10 ore per la parte di calcolo combinatorio, 5 
         per la parte di statistica descrittiva, 40 per la parte di probabilit\'a e 5 per la parte di statistica inferenziale.
-   
    \section{Calcolo Combinatorio}
     \subsection{Richiami}
         Serviranno i concetti di \textbf{insieme},\textbf{ sottoinsieme}, e di funzioni \textbf{iniettive} e \textbf{suriettive}.
@@ -399,6 +398,127 @@
 			\[
 				\binom{5}{3} = \binom{4}{3} + \binom{4}{2}
 			\]
+
+			Pi\`u in generale:
+
+			\[
+				\binom{n}{a, b, c} = \binom{n-1}{(a-1), b, c} + 
+				\binom{n-1}{a, (b-1), c} + \binom{n-1}{a, b, (c-1)}
+			\]
+
+			Essenzialmente dividiamo in 3 gruppi in modo tale che:
+
+			\begin{itemize}	
+				\item $A$ quelle in cui $n \in S_1 : \binom{n-1}{(a-1), b, c}$
+				\item $B$ quelle in cui $n \in S_2 : \binom{n-1}{a, (b-1), c}$
+				\item $C$ quelle in cui $n \in S_3 : \binom{n-1}{a, b, (c-1)}$
+			\end{itemize}
+			
+			\subsubsection{Cammini reticolari}
+
+			TODO grafici
+
+			\subsection{Numeri di Fibonacci}
+
+			Poniamo $F_n$ = \# sequenze binarie di lunghezza $n$ che non hanno
+			due $1$ consecutivi.
+
+			\begin{itemize}
+				\item $0,1 \to F_1 = 2$
+				\item $00, 01, 10 \to  F_2 = 3$
+				\item \ldots 
+			\end{itemize}
+
+			\subsubsection{Proposizione}
+
+			$\forall n \geq 3$ abbiamo $F_n = F_{n-1} + F_{n-2}$
+
+			\subsubsection{Dimostrazione}
+
+			Dividiamo le sequenze di $F_n$ in due gruppi:
+			\begin{itemize}
+				\item $A$ : Quelle che iniziano con $0$.
+				\item $B$ : Quelle che iniziano con $1$. 
+			\end{itemize}
+			Quelle che iniziano con $0 (A)$ sono $F_{n-1}$.
+
+			Infatti partendo da una sequenza lunga $n-1$ e aggiungendo uno $0$
+			ottengo una sequenza del gruppo $A$.
+
+			Quelle che iniziano con $1 (B)$ sono $F_{n-2}$.
+
+			10(. . . . .) quello marchiato tra parentesi sono $n-2$.
+			
+			\subsubsection{Proposizione}
+
+			\[
+				F_n = \sum_{n=0}^{\left\lceil{\frac{n}{2}}\right\rceil}
+				\binom{n-k+1}{k}
+			\]
+
+			\subsubsection{Dimostrazione}
+
+			Suddividiamo le sequenze lunghe $n$ senza due $1$ consecutivi
+			in tanti gruppi a seconda di quanti $1$ compaiono.
+
+			\begin{itemize}
+				\item $A_0$ : nessun $1$
+				\item $A_1$ : un $1$
+				\item $A_2$ : due $1$
+			\end{itemize}
+
+			Esempio $n = 4$:
+
+			\begin{itemize}
+				\item $A_0 : 0000$ 
+				\item $A_1 : 1000, 0100, 0010, 0001$
+				\item $A_2 : 1010, 1001, 0101$
+				\item $A_3, A_4	: \emptyset$
+			\end{itemize}
+			
+			Contiamo ora quante sequenze ci sono in $A_k$.
+
+			Esempio $n=9, k=3$.
+
+			\begin{itemize}
+				\item 010(01)0(01)0
+				\item 100(01)00(01)
+				\item 10000(01)(01)
+			\end{itemize}
+
+			E riscriviamo gli elementi cerchiati () trasformandoli
+			da (01) a (1)
+
+			\begin{itemize}
+				\item $010(01)0(01)0 \longleftrightarrow 010(1)0(1)0$
+				\item $100(01)00(01) \longleftrightarrow 100(1)0(1)$
+				\item $10000(01)(01) \longleftrightarrow 00100(1)(1)$
+			\end{itemize}
+
+			Ora quante sono lunghe $7$ ? sono $\binom{7}{3}$
+
+			Questo caso si pu\`o espandere al caso $n,k$ arbitrari con:
+
+			\[
+				\binom{n-(k-1)}{k}
+			\]
+
+			Il numero di sequenze in $A_k$, nell'esempio con  $n=4$.
+
+			\begin{itemize}
+				\item $|A_1| = 4 = \binom{4-0}{1}$
+				\item $|A_2| = 3 = \binom{4-1}{2}$
+			\end{itemize}
+
+			In conclusione :
+
+			\[
+				F_n = |A_0| + |A_1| + |A_2| + \ldots =
+				1 + \binom{n}{1} + \binom{n-1}{2} + \binom{n-2}{3} \ldots 
+				= \sum_{k}\binom{n-k+1}{k}
+			\]
+
+
             \subsection{Esercizi per il 3 Ottobre}
 			\textbf{\large 1} \\
 			\textit{Quante sono le sequenze date da due difre decimali?} \\\\
