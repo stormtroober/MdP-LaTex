@@ -779,4 +779,77 @@
 		I sottoinsiemi di $A_i$ si dicono blocchi o parti della partizione.
 
 		Le partizioni le scriviamo $\{A_1,A_2,\ldots,\}$
+
+		\subsubsection{Esempio}
+
+		$A = \{1,2\}$, ha $2$ possibili partizioni. TODO DISEGNO.
+
+		\begin{enumerate}
+			\item \{\{1\},\{2\}\}
+			\item \{\{1,2\}\}
+		\end{enumerate}
+
+		Se $|A| = 3$, abbiamo $5$ partizioni.
+		
+		TODO DISEGNO
+		\begin{enumerate}
+			\item \{\{1\},\{2\},\{3\}\}
+			\item \{\{1,2,3\}\}
+			\item \{\{1\},\{2,3\}\}
+			\item \{\{2\},\{1,3\}\}
+			\item \{\{3\},\{1,2\}\}
+		\end{enumerate}
+
+		\subsubsection{Definizione}
+
+		Il numero di partizioni di $\{1,\ldots,n\}$ si dice numero di Bell
+		e si indica $B_n$.
+
+		\begin{itemize}
+			\item $B_2 = 3$
+			\item $B_3 = 5$
+		\end{itemize}
+
+		Due formule per calcolare $B_n$.
+
+		\subsubsection{Formula ricorsiva}
+		
+	\[
+		B_n = \sum_{k=1}^{n}\binom{n-1}{k-1} B_{n-k}
+	\]
+		dove $B_0 = 1, B_1 = 1$.
+
+		\subsubsection{Dimostrazione}
+
+		Sia $A$ l'insieme di tutte le partizioni.
+
+		$A = A_1 \cup A_2 \cup \ldots \cup A_n$
+		
+		dove $A_k$ \`e formato dalle partizioni in cui $n$ sta in un blocco con
+		$k$ elementi.
+
+		Quanti sono gli elementi di $A_k$?
+
+		Procediamo per scelte:
+
+		\begin{enumerate}
+			\item Scegliamo gli altri $k-1$ elementi che formano un blocco
+				con $n$. Quindi ho $\binom{n-1}{k-1}$ scelte.
+			\item Scegliamo una partizione dei rimanenti $(n-k)$: 
+				$B_{n-k}$ possibilit\`a.
+		\end{enumerate}
+		
+		\[
+		\implies |A_k| = \binom{n-1}{k-1} \cdot B_{n-k}
+		\implies B_n = \sum_{k=1}^{n}\binom{n-1}{k-1}B_{n-k}
+	\]
+
+		\subsubsection{Esempio}
+		
+		\[
+			B_4 = \binom{3}{0} \cdot B_3 + \binom{3}{1} \cdot B_2 +
+			\binom{3}{2} \cdot B_1 + \binom{3}{3} \cdot B_0 = 15
+		\]
+
+		\subsubsection{Formula esplicita}
 \end{document}
