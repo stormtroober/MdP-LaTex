@@ -515,8 +515,7 @@
 			\[
 				F_n = |A_0| + |A_1| + |A_2| + \ldots =
 				1 + \binom{n}{1} + \binom{n-1}{2} + \binom{n-2}{3} \ldots 
-				= \sum_{k}^{\left\lceil {\frac{n}{2}} \right\rceil}
-				\binom{n-k+1}{k}
+				= \sum_{k}^{n} \binom{n-k+1}{k}
 			\]
 			\subsection{Insiemi}
 
@@ -542,5 +541,117 @@
 			- |A \cap B| - |A \cap C| - |B \cap C|
 			+ |A \cap B \cap C|$
 
+		\subsection{Lezione 16-10-2019 Principio di inclusione-esclusione}
 
+		$n=2 : |A_1 \cup A_2| = |A_1| + |A_2| - |A_1 \cap A_2|$
+
+		$n=3 : |A_1 \cup A_2 \cup A_3| = |A_1| + |A_2| + |A_3| - |A_1 \cap A_2|
+		|A_2 \cap A_3| - |A_1 \cap A_3| + |A_1 \cap A_2 \cap A_3|$
+		
+		$n$ qualsiasi?
+
+		Notazione: $I = \{2,4,5\}$
+
+		$\cap_{i \in I}A_i = A_2 \cap A_4 \cap A_5$
+
+		Principio di inclu. escl.
+		
+		\[
+		|A_1 \cup A_2 \cup \ldots \cup A_n| = 
+		\sum_{\emptyset \neq I \subset \{1,\ldots,n\}} (-1)^{|I|+ 1}
+		\] 
+		
+		\[
+		|\cap_{i \in i} A_i|
+		\]
+
+		\subsubsection{Condizioni}
+
+		Se $A_i \subseteq U$, chiamiamo $U$ insieme universo.
+		
+		\[
+			|(A_1 \cup A_2 \cup \ldots \cup A_n)^{c}| = |U| - |A_1 \cup \ldots 
+			\cup A_n|
+		.\] 
+		
+		Poniamo $\cap_{i \neq \emptyset} A_i = U$
+
+		Quando calcoliamo :
+
+		\[
+			|(A_1 \cup A_2 \cup \ldots \cup A_n)^{c}| = |U| - |A_1 \cup \ldots 
+			\cup A_n|
+			=
+			|\cap_{i \neq \emptyset} A_i| - 
+			\sum_{\emptyset \neq I \subseteq {1,\ldots,n} (-1)^{|I| + 1}}
+			|\cap_{i \in I} A_i| =
+		.\] 
+			
+		\[
+			\sum_{I \subseteq {1,\ldots,n}} (-1)^{|I|}| \cap_{i \in I} A_i|
+		\]
+
+		\subsubsection{A cosa serve dio merda?}
+
+		Funzioni (iniettive e) suriettive.
+
+		$A = \{1,2\}$
+
+		$B = \{1,2,3\}$
+
+		Quante sono le funzioni  $f: A \to  B$ ? sono 9.
+
+		$3$ scelte per l'immagine di $1$, e $3$ per l'immagine di $2$.
+
+		Quante sono quelle iniettive? Sono 6.
+
+		$3$ scelte per immagine di $1$, e poi dopo questa scelta per l'immagine
+		di $2$.
+
+		Quante sono quelle suriettive? sono 0 coglione.
+
+		Quante funzioni suriettive da $B \to A$?
+		
+		Solo 2 non sono suriettive, la funzione che manda $\{1,2,3\}$ in $1$,
+		e quelle che mandano $\{1,2,3\}$ in $2$. E quindi sono $6$.
+
+		\subsubsection{Esempio o generalizzazione}
+
+		\begin{itemize}
+			\item $A = \{1,\ldots,m\}$
+			\item $B = \{1,\ldots,n\}$
+		\end{itemize}
+		
+		Mh..
+
+		\begin{itemize}
+			\item  Le funzioni da $A$ a $B$ sono $n^{m}$
+			\item Le funzioni iniettive da $A \to B$, esistono se $m \leq n$,
+				e in tal caso sono $n(n-1)\cdot\cdot\cdot(n-m+1) = (n)_{m}$
+			\item Le funzioni suriettive esistono se $m \geq n$.
+				Per contarle usiamo il principio di incl. escl.,
+				Poniamo 
+				
+				$A_1 = \{F:A \to  B , 1 \not\in Imf\}$
+				
+				$A_2 = \{F : A \to  B , 2 \not\in  Imf\}$
+
+				$\vdots$
+
+				$A_n = \{F:A \to  B, n \not\in Imf\}$
+		\end{itemize}
+		
+		\subsubsection{Esempio}
+		
+		$A = \{1,2,3,4\}$
+
+		$B = \{1,2,3\}$
+		
+		\begin{itemize}
+			\item $f(1) = 1, f \not\in A_1$
+			\item $f(2) = 2, f \not\in  A_2$
+			\item $f(3) = 3 , f \not\in A_3$
+		\end{itemize}
+		
+		Una funzione \`e suriettiva se e solo se NON sta in nessuno degli $A_i$
 \end{document}
