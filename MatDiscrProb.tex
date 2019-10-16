@@ -810,7 +810,7 @@
 			\item $B_3 = 5$
 		\end{itemize}
 
-		Due formule per calcolare $B_n$.
+		Una formula per calcolare $B_n$.
 
 		\subsubsection{Formula ricorsiva}
 		
@@ -850,6 +850,58 @@
 			B_4 = \binom{3}{0} \cdot B_3 + \binom{3}{1} \cdot B_2 +
 			\binom{3}{2} \cdot B_1 + \binom{3}{3} \cdot B_0 = 15
 		\]
+		\subsubsection{Partizioni di $\{1,\ldots,n\}$ in $k$ blocchi}
 
-		\subsubsection{Formula esplicita}
+		$S_{n,k}$ = \# partizioni di $\{1,\ldots,n\}$ in $k$ blocchi.
+
+		$S_{3,2} = 3$ (visto prima).
+
+		\subsubsection{Formula ricorsiva per calcolare numeri di Stirling bho}
+
+		Per ogni $n,k > 1$, $S_{n,k} = k \cdot S_{n-1,k} + S_{n-1,k-1}$
+
+		\subsubsection{Dimostrazione}
+		
+		Contiamo separatemente le partizioni in $k$ blocchi in cui $n$ \`e 
+		da solo e quelle in cui \`e in "compagnia".
+
+		Nel primo gruppo devo partizionare i numeri $\{1,\ldots,n-1\}$ in $k-1$ 
+		blocchi: ho per definizione $S_{n-1,k-1}$ scelte.
+
+		Secondo gruppo ($n$ in compagnia), scegliamo una partizione in $k$
+		blocchi dei numeri da $\{1,\ldots,n-1\}$ : $S_{n-1,k}$ scelte.
+
+		Scelgo il blocco a cui aggiungere $n : k$ scelte.
+
+		\subsubsection{Esempio}
+
+		$S_{5,3}$, insieme di $5$ partizioni con $3$ blocchi.
+		
+		\[
+		S_{5,3} = 3 \cdot S_{4,3} + S_{4,2} = 18 + 2 \cdot S_{3,2} + S_{3,1}
+		= 18 + 2 \cdot 3 + 1 = 25
+		\]
+		$S_{4,3} = 6 = \binom{4}{2}$
+
+		Vogliamo calcolare $S_{5,3}$ in un altro modo.
+
+		\begin{itemize}
+			\item $1 \to 1$
+			\item $2 \to 3$
+			\item $3 \to 2$
+			\item $4 \to 1$
+			\item $5 \to 3$
+		\end{itemize}
+
+		Due elementi stanno nello stesso blocco se hanno la stessa immagine.
+
+		$\{\{1,4\},\{2,5\},\{3\}\}$
+
+		Se permuto le immagini ottengo la stessa partizione.
+
+		\subsubsection{Morale}
+
+		% $S_{n,k}$ = \frac{\# funzioni suriettive \{1,\ldots,n\} \to \{1,\ldots
+		%	{k!}
+
 \end{document}
