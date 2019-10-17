@@ -91,8 +91,10 @@
 
             \textbf{\large 2}\\
             C'è un torneo di un gioco (non specificato) in quale abbiamo 3 concorrenti A, B, C. Quali sono le possibili combinazioni del podio contando anche i pareggi?
-            \\
-            \textbf{\large Soluzione}\\
+
+            \textbf{\large Soluzione}
+
+
             $1^o$ Caso: nessun pareggio. 6 possibili combinazioni:
             \begin{center}
             	1) A,B,C\\
@@ -114,31 +116,44 @@
             \textbf{\large Soluzione}\\
             Come prima, dividiamo il problema in sottoproblemi e studiamo caso per caso.\\
             $1^o$ Caso: $3$ risultati diversi:
-            \begin{center}
-            	1) $4, 5, 6$\\
-            	2) $3, 4, 5$\\
-            	3) $3, 4, 6$\\
-            	4) $3, 5, 6$\\
-            \end{center}
-            Ognuna di queste ha 6 possibili combinazioni.\\
-            Totale temporaneo = $4 \cdot 6 = 24$.\\
+			\begin{enumerate}
+				\item $4, 5, 6$
+				\item $3, 4, 5$
+				\item $3, 4, 6$
+				\item $3, 5, 6$
+
+			\end{enumerate}
+            Ognuna di queste ha 6 possibili combinazioni.
+
+            Totale temporaneo = $4 \cdot 6 = 24$.
+
             $2^o$ Caso: $2$ risultati uguali $1$ diverso:
-            \begin{center}
-            	1) $4,4,5$\\
-            	2) $4,4,6$\\
-            	3) $5,5,3$\\
-            	4) $5,5,4$\\
-            	5) $5,5,6$\\
-            	6) $6,6,3$\\
-            	7) $6,6,4$\\
-            	8) $6,6,5$\\
-            \end{center}
-            E ognuna di queste pu\`o avere $3$ combinazioni diverse, \\quindi totale temporaneo = $24 + (8 \cdot 3) = 48$.\\
-            $3^o$ Caso: $3$ risultati uguali:\\
-            1) $5,5,5$\\
-            2) $6,6,6$\\
-            Totale = $48 + 2 = 50$.\\
-            Non contiamo il caso $1$ risultato uguale e $2$ diversi perchè non ha senso, siccome $1$ uguale a cosa? lol..\\
+
+			\begin{enumerate}
+				\item $4,4,5$
+				\item $4,4,6$
+				\item $5,5,3$
+				\item $5,5,4$
+				\item $5,5,6$
+				\item $6,6,3$
+				\item $6,6,4$
+				\item $6,6,5$
+
+			\end{enumerate}
+
+            E ognuna di queste pu\`o avere $3$ combinazioni diverse, \\quindi totale temporaneo = $24 + (8 \cdot 3) = 48$.
+
+            $3^o$ Caso: $3$ risultati uguali:
+			
+			\begin{enumerate}
+				\item  $5,5,5$
+				\item  $6,6,6$
+			\end{enumerate}
+
+            Totale = $48 + 2 = 50$.
+
+            Non contiamo il caso $1$ risultato uguale e $2$ diversi perchè non ha senso, siccome $1$ uguale a cosa? lol..
+
             \textbf{\large 4}\\
             L'insieme $A = \{1,2,...,11\}$ ha più sottoinsiemi di cardinalit\`a pari o dispari o il numero di sottoinsiemi pari è uguale a quello di dimensione dispari?\\
             \textbf{\large Soluzione}\\
