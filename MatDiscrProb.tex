@@ -43,17 +43,24 @@
             La funzione rappresenta la corrispondenza tra $B$ e l'insieme dei numeri interi positivi (infiniti) $\mapsto$ $B$ \`e \textbf{numerabile}.\\
             \textbf{\large 2}\\
             $Z=\{0,1,-1,2,-2,..\}$ \`e \textbf{numerabile}? \\
-            Si, lo \`e perch\`e basta fare le giuste associazioni : \\
-            $0\mapsto 0 $, $1\mapsto1$, $-1\mapsto2$, $2\mapsto3$\\
-            $f:Z\to N$ $\{2z-1 $ se $z>0$ \\
-            \hspace*{1,8cm} $\{-2z  $ \hspace{0,35cm}se $z\leq0$  \\
-            \textbf{Osservazione}\\
+            Si, lo \`e perch\`e basta fare le giuste associazioni :
+
+            $0\mapsto 0 $, $1\mapsto1$, $-1\mapsto2$, $2\mapsto3$
+
+            $f:Z\to N = 
+			 \begin{cases}
+				 2z-1, &\mbox{if } z>0\\
+				-2z, &\mbox{if } z \leq 0
+			 \end{cases}$
+
+
+            \subsubsection{Osservazione}
             Un insieme \`e \textbf{numerabile} se riesco ad elencare tutti i suoi elementi in un elenco infinito e viceversa.\\
             \textbf{3}\\
             $Q \geq 0 =\{\frac{a}{b}:a,b \in N , b\ne 0\}$ (Tutte le frazioni $>$ 0)\\
             \`e \textbf{numerabile}, l'importante \`e poter esprimere le frazioni in un elenco.\\
-            $0,1,\frac{1}{2},2,\frac{1}{3},\frac{2}{3},\frac{3}{2},3,\frac{1}{4},\frac{3}{4},\frac{4}{3},4, ...$\\ In questo modo posso sicuramente scrivere \textbf{tutti} i numeri razionali.\\
-            \\\\\\
+            $0,1,\frac{1}{2},2,\frac{1}{3},\frac{2}{3},\frac{3}{2},3,\frac{1}{4},\frac{3}{4},\frac{4}{3},4, ...$\\ In questo modo posso sicuramente scrivere \textbf{tutti} i numeri razionali.
+
             \textbf{\large 4}\\
             $A=\{$sequenze binarie di lunghezza infinita$\}$\\
             Vogliamo mostrare che $A$ non \`e \textbf{numerabile}. Prendiamo un elenco infinito di elementi di A.\\
@@ -69,16 +76,19 @@
         \subsubsection{Esercizi}
             \textbf{\large 1}\\
             Abbiamo due biglietti da regalare a due amici scelti su 10. In quanti modi posso fare la scelta?
-            \\
-            \textbf{\large Soluzione}\\
+
+            \textbf{\large Soluzione}
+
             Possiamo partire puntando la prima persona ($1$) e contando con quante possibili persone la persona $1$ pu\`o andare al concerto. Siccome sono $10$ persone, allora la persona $1$ potr\`a andare al concerto con $9$ persone.
             Ora controlliamo con quante persone la persona $2$ pu\`o andare al concerto (escludendo l'esistenza della persona $1$), e sta volta saranno $8$.
             Ora vedremo uno schema ricorsivo per il conteggio delle combinazioni siccome la persona $3$, potr\`a andare al concerto con $7$ persone (escludendo questa volta la persona $1, 2$).
             Ora per contare le possibili combinazioni \`e facile vedere che ci basta fare una sommatoria da $1$ a $9$.
-            \\    
-            $\sum_{i=1}^{9}i = 45$, using Gauss formula $\frac{n(n+1)}{2}$.
-            \\
-            \\
+
+		\[
+            \sum_{i=1}^{9}i = 45
+		\]
+			, using Gauss formula $\frac{n(n+1)}{2}$
+
             \textbf{\large 2}\\
             C'è un torneo di un gioco (non specificato) in quale abbiamo 3 concorrenti A, B, C. Quali sono le possibili combinazioni del podio contando anche i pareggi?
             \\
